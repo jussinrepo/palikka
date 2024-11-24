@@ -233,13 +233,16 @@ def draw_menu(settings, selected_option):
         screen.blit(text, text_rect)
 
     # Credits
-    font = pygame.font.Font(None, 24)
+    font = pygame.font.Font(None, 22)
     text1 = font.render("Use arrow keys to play", True, WHITE)
-    text2 = font.render("Made by Jussi & Claude 3.5", True, YELLOW)
-    text_rect1 = text1.get_rect(center=(WIDTH // 2, HEIGHT - 40))
-    text_rect2 = text2.get_rect(center=(WIDTH // 2, HEIGHT - 20))
+    text2 = font.render("P = pause, C = block, B = background", True, WHITE)
+    text3 = font.render("Made by Jussi & Claude 3.5", True, YELLOW)
+    text_rect1 = text1.get_rect(center=(WIDTH // 2, HEIGHT - 80))
+    text_rect2 = text2.get_rect(center=(WIDTH // 2, HEIGHT - 50))
+    text_rect3 = text3.get_rect(center=(WIDTH // 2, HEIGHT - 20))
     screen.blit(text1, text_rect1)
     screen.blit(text2, text_rect2)
+    screen.blit(text3, text_rect3)
 
 def main_menu():
     settings = {'colors': 4, 'debris': 0}
